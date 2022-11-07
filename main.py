@@ -29,6 +29,8 @@ else:
     else:
         print("単語の取得に失敗しました。")
 
+#test
+
     
 #englishリストが、二重リストになっていて、[be], [interested], [in]という状態を解消する。
 
