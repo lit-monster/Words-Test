@@ -34,7 +34,7 @@ else:
     for words in english_words:
         for word in words:
             print(word + " ", end="")
-        print("\n")
+            print("\n")
 
 # questions = dict(zip(english_words, japanese))
 # for s, t in enumerate(questions):
