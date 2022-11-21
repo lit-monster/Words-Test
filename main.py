@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 url = 'https://toiguru.jp/toeic-vocabulary-list#smoothplay1'
 
-english = []
+english_words = []
 japanese = []
 
 try:
@@ -21,17 +21,22 @@ else:
 
     for word in words:
         word = str(word).replace('<td>', '').replace('</td>', '').replace('<br/>', '')
-        english.append(re.findall('[a-z]+', word))
+        english_words.append(re.findall('[a-z]+', word))
         japanese.append(re.sub("[a-zA-Z]", "", word))
     
-    if len(english) == len(japanese):
+    if len(english_words) == len(japanese):
         print("単語を取得しました。")
     else:
         print("単語の取得に失敗しました。")
 
-#englishリストが、二重リストになっていて、[be], [interested], [in]という状態を解消する。
+    # print(english_words[15][0] + " " + english_words[15][1])
 
-# questions = dict(zip(english, japanese))
+    for words in english_words:
+        for word in words:
+            print(word + " ", end="")
+        print("\n")
+
+# questions = dict(zip(english_words, japanese))
 # for s, t in enumerate(questions):
 #     print(f'{s} : {t}')
 
