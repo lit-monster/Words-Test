@@ -4,7 +4,7 @@ class Quiz(object):
     def __init__(self, dictionary):
         self.dictionary = dictionary
     def quiz_handler(self):
-        template = "*"*15 + '\n英単語 : {}\n日本語を入力してください\n'+ '*'*15
+        template = "*"*30 + '\n英単語 : {}\n日本語を入力してください\n'+ '↓'*15
 
         print("英単語クイズを開始します。")
         switch = input("クイズを開始しますか？ y/[N] : ")
