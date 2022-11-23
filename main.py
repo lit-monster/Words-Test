@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 url = 'https://toiguru.jp/toeic-vocabulary-list#smoothplay1'
 
 english_words = []
+en_list = []
 japanese = []
 
 try:
@@ -32,9 +33,11 @@ else:
     # print(english_words[15][0] + " " + english_words[15][1])
 
     for words in english_words:
-        for word in words:
-            print(word + " ", end="")
-        print("\n")
+        en_list.append(' '.join(words))
+
+    print(en_list)
+            
+
 
 # questions = dict(zip(english_words, japanese))
 # for s, t in enumerate(questions):
@@ -52,4 +55,3 @@ else:
 
 
 
-    
